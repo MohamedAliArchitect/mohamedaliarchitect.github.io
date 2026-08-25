@@ -24,4 +24,230 @@ body {
 
 }
 
-header
+header {
+
+  text-align: center;
+
+  padding: 40px 20px;
+
+  background: white;
+
+}
+
+button {
+
+  padding: 10px 20px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+}
+
+section {
+
+  max-width: 900px;
+
+  margin: 30px auto;
+
+  padding: 25px;
+
+  background: white;
+
+  border-radius: 10px;
+
+}
+
+h2 {
+
+  color: #8a6d1d;
+
+}
+
+.project {
+
+  border: 1px solid #ddd;
+
+  padding: 20px;
+
+  margin-top: 15px;
+
+} </style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1 id="name">Mohamed Ali Architect</h1>
+
+<p id="subtitle">
+
+Architectural Design • Construction Documents • AutoCAD • Revit
+
+</p>
+
+<button id="languageButton" onclick="changeLanguage()">العربية</button>
+
+</header>
+
+<section>
+
+<h2 id="aboutTitle">About Me</h2>
+
+<p id="aboutText">
+
+I am an architect and architectural consultant.
+
+</p>
+
+</section>
+
+<section>
+
+<h2 id="portfolioTitle">Architectural Portfolio</h2>
+
+<div class="project">
+
+<h3 id="project1Title">
+
+Project 01 — Architectural Design
+
+</h3>
+
+<p id="project1Text">
+
+Architectural design and construction documentation.
+
+</p>
+
+</div> <div class="project">
+
+<h3 id="project2Title">
+
+Project 02 — Architectural Drawings
+
+</h3>
+
+<p id="project2Text">
+
+Construction drawings and architectural details.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3 id="project3Title">
+
+Project 03 — Revit
+
+</h3>
+
+<p id="project3Text">
+
+Architectural modeling and documentation using Revit.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 id="contactTitle">Contact</h2>
+
+<p id="contactText">
+
+For architectural design, drawings and consultation, please contact me.
+
+</p>
+
+</section> <script>
+
+let arabic = false;
+
+function changeLanguage() {
+
+  arabic = !arabic;
+
+  if (arabic) {
+
+    document.documentElement.lang = "ar";
+
+    document.documentElement.dir = "rtl";
+
+    document.getElementById("name").innerText = "محمد علي — مهندس معماري";
+
+    document.getElementById("subtitle").innerText = "التصميم المعماري • مستندات التنفيذ • AutoCAD • Revit";
+
+    document.getElementById("languageButton").innerText = "English";
+
+    document.getElementById("aboutTitle").innerText = "نبذة عني";
+
+    document.getElementById("aboutText").innerText = "أنا مهندس معماري واستشاري معماري.";
+
+    document.getElementById("portfolioTitle").innerText = "نماذج من الأعمال";
+
+    document.getElementById("project1Title").innerText = "المشروع 01 — التصميم المعماري";
+
+    document.getElementById("project1Text").innerText = "التصميم المعماري وإعداد مستندات التنفيذ.";
+
+    document.getElementById("project2Title").innerText = "المشروع 02 — الرسومات المعمارية";
+
+    document.getElementById("project2Text").innerText = "الرسومات التنفيذية والتفاصيل المعمارية.";
+
+    document.getElementById("project3Title").innerText = "المشروع 03 — Revit";
+
+    document.getElementById("project3Text").innerText = "النمذجة المعمارية وإعداد المستندات باستخدام Revit.";
+
+    document.getElementById("contactTitle").innerText = "التواصل";
+
+    document.getElementById("contactText").innerText = "للاستفسار عن التصميم المعماري أو الرسومات أو الاستشارات، يرجى التواصل معي.";
+
+  } else {
+
+    document.documentElement.lang = "en";
+
+    document.documentElement.dir = "ltr";
+
+    document.getElementById("name").innerText = "Mohamed Ali Architect";
+
+    document.getElementById("subtitle").innerText = "Architectural Design • Construction Documents • AutoCAD • Revit";
+
+    document.getElementById("languageButton").innerText = "العربية";
+
+    document.getElementById("aboutTitle").innerText = "About Me";
+
+    document.getElementById("aboutText").innerText = "I am an architect and architectural consultant.";
+
+    document.getElementById("portfolioTitle").innerText = "Architectural Portfolio";
+
+    document.getElementById("project1Title").innerText = "Project 01 — Architectural Design";
+
+    document.getElementById("project1Text").innerText = "Architectural design and construction documentation.";
+
+    document.getElementById("project2Title").innerText = "Project 02 — Architectural Drawings";
+
+    document.getElementById("project2Text").innerText = "Construction drawings and architectural details.";
+
+    document.getElementById("project3Title").innerText = "Project 03 — Revit";
+
+    document.getElementById("project3Text").innerText = "Architectural modeling and documentation using Revit.";
+
+    document.getElementById("contactTitle").innerText = "Contact";
+
+    document.getElementById("contactText").innerText = "For architectural design, drawings and consultation, please contact me.";
+
+  }
+
+}
+
+</script>
+
+</body>
+
+</html>
