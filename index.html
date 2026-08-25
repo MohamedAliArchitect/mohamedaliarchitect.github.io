@@ -12,30 +12,40 @@
 
 <body>
 
-<h1>Mohamed Ali Architect</h1>
-<button onclick="changeLanguage()">العربية</button>
-<h2>Architectural Portfolio</h2>
-<p>English | العربية</p>
-<p>Architectural Design • Construction Documents • AutoCAD • Revit</p>
-<h2>نبذة عني</h2>
-              <p>أنا مهندس معماري واستشاري معماري.</p>
+<h1 data-en="Mohamed Ali Architect" data-ar="محمد علي المهندس المعماري">Mohamed Ali Architect</h1>
+<button onclick="changeLanguage()" data-en="العربية" data-ar="English">العربية</button>
+<h2 data-en="Architectural Portfolio" data-ar="المحفظة المعمارية">Architectural Portfolio</h2>
+<p data-en="English | العربية" data-ar="الإنجليزية | العربية">English | العربية</p>
+<p data-en="Architectural Design • Construction Documents • AutoCAD • Revit" data-ar="التصميم المعماري • وثائق البناء • AutoCAD • Revit">Architectural Design • Construction Documents • AutoCAD • Revit</p>
+<h2 data-en="About Me" data-ar="نبذة عني">نبذة عني</h2>
+<p data-en="I am an architect and architectural consultant." data-ar="أنا مهندس معماري واستشاري معماري.">أنا مهندس معماري واستشاري معماري.</p>
 
-<h2>Portfolio | نماذج من الأعمال</h2>
+<h2 data-en="Portfolio | نماذج من الأعمال" data-ar="المحفظة | نماذج من الأعمال">Portfolio | نماذج من الأعمال</h2>
 
-<p>Project 01 — Architectural Design</p>
+<p data-en="Project 01 — Architectural Design" data-ar="المشروع 01 — التصميم المعماري">Project 01 — Architectural Design</p>
 
-<h2>Contact | التواصل</h2>
+<h2 data-en="Contact | التواصل" data-ar="التواصل | التواصل">Contact | التواصل</h2>
 
-<p>Mohamed Ali Architect</p>
+<p data-en="Mohamed Ali Architect" data-ar="محمد علي المهندس المعماري">Mohamed Ali Architect</p>
 <script>
+
+let currentLanguage = 'ar';
 
 function changeLanguage() {
 
-document.querySelector("h2").innerText = "نبذة عني";
+  currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+  
+  document.documentElement.lang = currentLanguage;
+  if (currentLanguage === 'ar') {
+    document.documentElement.dir = 'rtl';
+  } else {
+    document.documentElement.dir = 'ltr';
+  }
 
-document.querySelector("h2 + p").innerText =
-
-"أنا مهندس معماري واستشاري معماري.";
+  const elements = document.querySelectorAll('[data-en][data-ar]');
+  elements.forEach(el => {
+    el.innerText = currentLanguage === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-ar');
+  });
 
 }
 
