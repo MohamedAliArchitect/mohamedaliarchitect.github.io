@@ -1,55 +1,27 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Mohamed Ali Architect</title>
 
-</head>
+<style>
 
-<body>
+body {
 
-<h1 data-en="Mohamed Ali Architect" data-ar="محمد علي المهندس المعماري">Mohamed Ali Architect</h1>
-<button onclick="changeLanguage()" data-en="العربية" data-ar="English">العربية</button>
-<h2 data-en="Architectural Portfolio" data-ar="المحفظة المعمارية">Architectural Portfolio</h2>
-<p data-en="English | العربية" data-ar="الإنجليزية | العربية">English | العربية</p>
-<p data-en="Architectural Design • Construction Documents • AutoCAD • Revit" data-ar="التصميم المعماري • وثائق البناء • AutoCAD • Revit">Architectural Design • Construction Documents • AutoCAD • Revit</p>
-<h2 data-en="About Me" data-ar="نبذة عني">نبذة عني</h2>
-<p data-en="I am an architect and architectural consultant." data-ar="أنا مهندس معماري واستشاري معماري.">أنا مهندس معماري واستشاري معماري.</p>
+  margin: 0;
 
-<h2 data-en="Portfolio | نماذج من الأعمال" data-ar="المحفظة | نماذج من الأعمال">Portfolio | نماذج من الأعمال</h2>
+  font-family: Arial, sans-serif;
 
-<p data-en="Project 01 — Architectural Design" data-ar="المشروع 01 — التصميم المعماري">Project 01 — Architectural Design</p>
+  background: #f5f5f5;
 
-<h2 data-en="Contact | التواصل" data-ar="التواصل | التواصل">Contact | التواصل</h2>
-
-<p data-en="Mohamed Ali Architect" data-ar="محمد علي المهندس المعماري">Mohamed Ali Architect</p>
-<script>
-
-let currentLanguage = 'ar';
-
-function changeLanguage() {
-
-  currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
-  
-  document.documentElement.lang = currentLanguage;
-  if (currentLanguage === 'ar') {
-    document.documentElement.dir = 'rtl';
-  } else {
-    document.documentElement.dir = 'ltr';
-  }
-
-  const elements = document.querySelectorAll('[data-en][data-ar]');
-  elements.forEach(el => {
-    el.innerText = currentLanguage === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-ar');
-  });
+  color: #333;
 
 }
 
-</script>
-</body>
-
-</html>
+header
