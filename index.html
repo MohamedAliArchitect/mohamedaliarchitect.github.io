@@ -154,8 +154,6 @@ h2 {
   text-decoration: underline;
 }
 
-/* Visitor Counter */
-
 .visitor-counter {
   margin-top: 30px;
   padding: 18px;
@@ -251,45 +249,27 @@ My professional background includes architectural design and documentation using
 <div class="projects">
 
 <div class="project">
-
 <div class="project-number">PROJECT 01</div>
-
-<h3 id="project1Title">
-Architectural Design
-</h3>
-
+<h3 id="project1Title">Architectural Design</h3>
 <p id="project1Text">
 Architectural design, planning and preparation of construction documents.
 </p>
-
 </div>
 
 <div class="project">
-
 <div class="project-number">PROJECT 02</div>
-
-<h3 id="project2Title">
-Construction Drawings
-</h3>
-
+<h3 id="project2Title">Construction Drawings</h3>
 <p id="project2Text">
 Detailed architectural drawings, working drawings and construction documentation.
 </p>
-
 </div>
 
 <div class="project">
-
 <div class="project-number">PROJECT 03</div>
-
-<h3 id="project3Title">
-Revit
-</h3>
-
+<h3 id="project3Title">Revit</h3>
 <p id="project3Text">
 Architectural modeling and documentation using Autodesk Revit.
 </p>
-
 </div>
 
 </div>
@@ -345,18 +325,7 @@ benghalibs1952@yahoo.com
 
 <span id="visitorLabel">👁️ Visitors:</span>
 
-<span id="visitorCount">
-<script>
-fetch("https://mohamedaliarchitect.goatcounter.com/counter/TOTAL.json")
-.then(response => response.json())
-.then(data => {
-  document.getElementById("visitorCount").innerText = data.count;
-})
-.catch(() => {
-  document.getElementById("visitorCount").innerText = "—";
-});
-</script>
-</span>
+<span id="visitorCount">—</span>
 
 </div>
 
@@ -530,23 +499,6 @@ function changeLanguage() {
 
 <script data-goatcounter="https://mohamedaliarchitect.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
-<div id="visitor-counter" style="text-align:center; margin:20px 0;">
-  <strong>👁️ Total Visitors: </strong>
-  <span id="visitor-number">Loading...</span>
-</div>
-
-<script>
-setTimeout(function() {
-  if (window.goatcounter && window.goatcounter.visit_count) {
-    window.goatcounter.visit_count({
-      append: '#visitor-number',
-      path: 'TOTAL',
-      no_branding: true
-    });
-  }
-}, 1000);
-</script>
 
 </body>
 </html>
