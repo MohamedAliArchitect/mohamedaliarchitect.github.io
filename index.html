@@ -7,6 +7,7 @@
 <title>MOHAMED AL SAYED GHALIB | Architect</title>
 
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -72,7 +73,7 @@ nav a:hover {
 }
 
 section {
-  max-width: 1050px;
+  max-width: 1100px;
   margin: 38px auto;
   padding: 38px;
   background: white;
@@ -93,6 +94,54 @@ h2 {
   font-size: 18px;
 }
 
+/* PORTFOLIO */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.gallery-item {
+  background: #faf9f6;
+  border: 1px solid #d9d2c4;
+  border-top: 4px solid #c6a15b;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  background: #eee;
+}
+
+.gallery-caption {
+  padding: 18px;
+  text-align: center;
+}
+
+.gallery-caption h3 {
+  margin: 0 0 7px;
+  color: #444;
+}
+
+.gallery-caption p {
+  margin: 0;
+  color: #777;
+}
+
+/* SKILLS */
+
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -109,35 +158,7 @@ h2 {
   font-weight: bold;
 }
 
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
-}
-
-.project {
-  border: 1px solid #d9d2c4;
-  border-top: 4px solid #c6a15b;
-  border-radius: 10px;
-  padding: 25px;
-  background: #faf9f6;
-  transition: transform 0.2s;
-}
-
-.project:hover {
-  transform: translateY(-4px);
-}
-
-.project h3 {
-  color: #444;
-  margin-top: 0;
-}
-
-.project-number {
-  color: #b08a43;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
+/* CONTACT */
 
 .contact-box {
   text-align: center;
@@ -154,6 +175,8 @@ h2 {
   text-decoration: underline;
 }
 
+/* VISITOR COUNTER */
+
 .visitor-counter {
   margin-top: 30px;
   padding: 18px;
@@ -166,11 +189,13 @@ h2 {
   font-weight: bold;
 }
 
-#visitorCount {
+#visitor-number {
   color: #9a752d;
   font-size: 22px;
   margin-left: 5px;
 }
+
+/* FOOTER */
 
 footer {
   background: #222;
@@ -201,7 +226,12 @@ footer {
     display: inline-block;
     margin: 5px 8px;
   }
+
+  .gallery-item img {
+    height: 220px;
+  }
 }
+
 </style>
 </head>
 
@@ -209,7 +239,9 @@ footer {
 
 <header>
 
-<h1 id="name">MOHAMED AL SAYED GHALIB — ARCHITECT</h1>
+<h1 id="name">
+MOHAMED AL SAYED GHALIB — ARCHITECT
+</h1>
 
 <p id="subtitle">
 Architectural Design • Construction Documents • AutoCAD • Revit
@@ -221,16 +253,31 @@ Architectural Design • Construction Documents • AutoCAD • Revit
 
 </header>
 
+
 <nav>
+
 <a href="#about" id="navAbout">About</a>
-<a href="#portfolio" id="navPortfolio">Portfolio</a>
-<a href="#skills" id="navSkills">Skills</a>
-<a href="#contact" id="navContact">Contact</a>
+
+<a href="#portfolio" id="navPortfolio">
+Portfolio
+</a>
+
+<a href="#skills" id="navSkills">
+Skills
+</a>
+
+<a href="#contact" id="navContact">
+Contact
+</a>
+
 </nav>
+
 
 <section id="about">
 
-<h2 id="aboutTitle">About Me</h2>
+<h2 id="aboutTitle">
+About Me
+</h2>
 
 <p class="about-text" id="aboutText">
 I am an architect and architectural consultant with professional experience in architectural design, construction documents, working drawings, architectural detailing and project coordination.
@@ -242,61 +289,247 @@ My professional background includes architectural design and documentation using
 
 </section>
 
+
 <section id="portfolio">
 
-<h2 id="portfolioTitle">Architectural Portfolio</h2>
+<h2 id="portfolioTitle">
+Architectural Portfolio
+</h2>
 
-<div class="projects">
+<div class="gallery">
 
-<div class="project">
-<div class="project-number">PROJECT 01</div>
-<h3 id="project1Title">Architectural Design</h3>
-<p id="project1Text">
-Architectural design, planning and preparation of construction documents.
+
+<div class="gallery-item">
+
+<img src="VXD3.jpg"
+alt="Architectural Project">
+
+<div class="gallery-caption">
+
+<h3>
+Architectural Design
+</h3>
+
+<p>
+Architectural Visualization
 </p>
+
 </div>
 
-<div class="project">
-<div class="project-number">PROJECT 02</div>
-<h3 id="project2Title">Construction Drawings</h3>
-<p id="project2Text">
-Detailed architectural drawings, working drawings and construction documentation.
-</p>
 </div>
 
-<div class="project">
-<div class="project-number">PROJECT 03</div>
-<h3 id="project3Title">Revit</h3>
-<p id="project3Text">
-Architectural modeling and documentation using Autodesk Revit.
+
+<div class="gallery-item">
+
+<img src="VXD4.jpg"
+alt="Architectural Project">
+
+<div class="gallery-caption">
+
+<h3>
+Architectural Design
+</h3>
+
+<p>
+Exterior Architectural Study
 </p>
+
 </div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="VXD5.jpg"
+alt="Architectural Project">
+
+<div class="gallery-caption">
+
+<h3>
+Architectural Project
+</h3>
+
+<p>
+Architectural Visualization
+</p>
+
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="VXD10.jpg"
+alt="Architectural Project">
+
+<div class="gallery-caption">
+
+<h3>
+Architectural Design
+</h3>
+
+<p>
+3D Architectural Visualization
+</p>
+
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="PR5.jpg"
+alt="Architectural Project">
+
+<div class="gallery-caption">
+
+<h3>
+Architectural Presentation
+</h3>
+
+<p>
+Architectural Design Study
+</p>
+
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="V7.jpg"
+alt="Architectural Project">
+
+<div class="gallery-caption">
+
+<h3>
+Architectural Visualization
+</h3>
+
+<p>
+Architectural Design
+</p>
+
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="3D View 1.jpg"
+alt="Architectural Project">
+
+<div class="gallery-caption">
+
+<h3>
+Revit Project
+</h3>
+
+<p>
+Architectural Modeling
+</p>
+
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="MAIN SS A4.jpg"
+alt="Construction Drawing">
+
+<div class="gallery-caption">
+
+<h3>
+Construction Documents
+</h3>
+
+<p>
+Architectural Working Drawings
+</p>
+
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="p4.jpg"
+alt="Architectural Project">
+
+<div class="gallery-caption">
+
+<h3>
+Architectural Design
+</h3>
+
+<p>
+Project Presentation
+</p>
+
+</div>
+
+</div>
+
 
 </div>
 
 </section>
+
 
 <section id="skills">
 
-<h2 id="skillsTitle">Professional Skills</h2>
+<h2 id="skillsTitle">
+Professional Skills
+</h2>
 
 <div class="skills">
 
-<div class="skill">AutoCAD</div>
-<div class="skill">Revit</div>
-<div class="skill">Architectural Design</div>
-<div class="skill">Construction Documents</div>
-<div class="skill">Working Drawings</div>
-<div class="skill">Architectural Detailing</div>
-<div class="skill">Project Coordination</div>
+<div class="skill">
+AutoCAD
+</div>
+
+<div class="skill">
+Revit
+</div>
+
+<div class="skill">
+Architectural Design
+</div>
+
+<div class="skill">
+Construction Documents
+</div>
+
+<div class="skill">
+Working Drawings
+</div>
+
+<div class="skill">
+Architectural Detailing
+</div>
+
+<div class="skill">
+Project Coordination
+</div>
 
 </div>
 
 </section>
 
+
 <section id="contact">
 
-<h2 id="contactTitle">Contact</h2>
+<h2 id="contactTitle">
+Contact
+</h2>
 
 <div class="contact-box">
 
@@ -305,12 +538,17 @@ For architectural design, drawings and consultation, please feel free to contact
 </p>
 
 <p>
-<strong>MOHAMED AL SAYED GHALIB — ARCHITECT</strong>
+<strong>
+MOHAMED AL SAYED GHALIB — ARCHITECT
+</strong>
 </p>
 
 <p>
-📞 <span dir="ltr">
-<a href="tel:+13609195461">360-919-5461</a>
+📞
+<span dir="ltr">
+<a href="tel:+13609195461">
+360-919-5461
+</a>
 </span>
 </p>
 
@@ -321,17 +559,23 @@ benghalibs1952@yahoo.com
 </a>
 </p>
 
+
 <div class="visitor-counter">
 
-<span id="visitorLabel">👁️ Visitors:</span>
+<span id="visitorLabel">
+👁️ Visitors:
+</span>
 
-<span id="visitorCount">—</span>
+<span id="visitor-number">
+Loading...
+</span>
 
 </div>
 
 </div>
 
 </section>
+
 
 <footer>
 
@@ -341,164 +585,137 @@ benghalibs1952@yahoo.com
 
 </footer>
 
+
+<!-- GOATCOUNTER -->
+
+<script
+data-goatcounter="https://mohamedaliarchitect.goatcounter.com/count"
+async
+src="//gc.zgo.at/count.js">
+</script>
+
+
 <script>
+
+/* LANGUAGE */
 
 let arabic = false;
 
 function changeLanguage() {
 
-  arabic = !arabic;
+arabic = !arabic;
 
-  if (arabic) {
+if (arabic) {
 
-    document.documentElement.lang = "ar";
-    document.documentElement.dir = "rtl";
+document.documentElement.lang = "ar";
+document.documentElement.dir = "rtl";
 
-    document.getElementById("name").innerText =
-      "محمد السيد غالب — مهندس معماري";
+document.getElementById("name").innerText =
+"محمد السيد غالب — مهندس معماري";
 
-    document.getElementById("subtitle").innerText =
-      "التصميم المعماري • مستندات التنفيذ • AutoCAD • Revit";
+document.getElementById("subtitle").innerText =
+"التصميم المعماري • مستندات التنفيذ • AutoCAD • Revit";
 
-    document.getElementById("languageButton").innerText =
-      "English";
+document.getElementById("languageButton").innerText =
+"English";
 
-    document.getElementById("navAbout").innerText =
-      "نبذة عني";
+document.getElementById("navAbout").innerText =
+"نبذة عني";
 
-    document.getElementById("navPortfolio").innerText =
-      "الأعمال";
+document.getElementById("navPortfolio").innerText =
+"الأعمال";
 
-    document.getElementById("navSkills").innerText =
-      "المهارات";
+document.getElementById("navSkills").innerText =
+"المهارات";
 
-    document.getElementById("navContact").innerText =
-      "التواصل";
+document.getElementById("navContact").innerText =
+"التواصل";
 
-    document.getElementById("aboutTitle").innerText =
-      "نبذة عني";
+document.getElementById("aboutTitle").innerText =
+"نبذة عني";
 
-    document.getElementById("aboutText").innerText =
-      "أنا مهندس معماري واستشاري معماري، لدي خبرة مهنية في التصميم المعماري، ومستندات التنفيذ، والرسومات التنفيذية، والتفاصيل المعمارية وتنسيق المشروعات.";
+document.getElementById("aboutText").innerText =
+"أنا مهندس معماري واستشاري معماري، لدي خبرة مهنية في التصميم المعماري، ومستندات التنفيذ، والرسومات التنفيذية، والتفاصيل المعمارية وتنسيق المشروعات.";
 
-    document.getElementById("aboutText2").innerText =
-      "تشمل خبرتي المهنية التصميم المعماري وإعداد المستندات باستخدام AutoCAD وRevit.";
+document.getElementById("aboutText2").innerText =
+"تشمل خبرتي المهنية التصميم المعماري وإعداد المستندات باستخدام AutoCAD وRevit.";
 
-    document.getElementById("portfolioTitle").innerText =
-      "نماذج من الأعمال";
+document.getElementById("portfolioTitle").innerText =
+"نماذج من الأعمال";
 
-    document.getElementById("project1Title").innerText =
-      "التصميم المعماري";
+document.getElementById("skillsTitle").innerText =
+"المهارات المهنية";
 
-    document.getElementById("project1Text").innerText =
-      "التصميم المعماري والتخطيط وإعداد مستندات التنفيذ.";
+document.getElementById("contactTitle").innerText =
+"التواصل";
 
-    document.getElementById("project2Title").innerText =
-      "الرسومات التنفيذية";
+document.getElementById("contactText").innerText =
+"للاستفسار عن التصميم المعماري أو الرسومات أو الاستشارات، يسعدني التواصل معكم.";
 
-    document.getElementById("project2Text").innerText =
-      "الرسومات المعمارية التفصيلية والرسومات التنفيذية ومستندات التنفيذ.";
+document.getElementById("visitorLabel").innerText =
+"👁️ عدد زيارات الموقع:";
 
-    document.getElementById("project3Title").innerText =
-      "Revit";
+document.getElementById("footerText").innerText =
+"© 2026 محمد السيد غالب — مهندس معماري";
 
-    document.getElementById("project3Text").innerText =
-      "النمذجة المعمارية وإعداد المستندات باستخدام Autodesk Revit.";
+} else {
 
-    document.getElementById("skillsTitle").innerText =
-      "المهارات المهنية";
+document.documentElement.lang = "en";
+document.documentElement.dir = "ltr";
 
-    document.getElementById("contactTitle").innerText =
-      "التواصل";
+document.getElementById("name").innerText =
+"MOHAMED AL SAYED GHALIB — ARCHITECT";
 
-    document.getElementById("contactText").innerText =
-      "للاستفسار عن التصميم المعماري أو الرسومات أو الاستشارات، يسعدني التواصل معكم.";
+document.getElementById("subtitle").innerText =
+"Architectural Design • Construction Documents • AutoCAD • Revit";
 
-    document.getElementById("visitorLabel").innerText =
-      "👁️ عدد زيارات الموقع:";
+document.getElementById("languageButton").innerText =
+"العربية";
 
-    document.getElementById("footerText").innerText =
-      "© 2026 محمد السيد غالب — مهندس معماري";
+document.getElementById("navAbout").innerText =
+"About";
 
-  } else {
+document.getElementById("navPortfolio").innerText =
+"Portfolio";
 
-    document.documentElement.lang = "en";
-    document.documentElement.dir = "ltr";
+document.getElementById("navSkills").innerText =
+"Skills";
 
-    document.getElementById("name").innerText =
-      "MOHAMED AL SAYED GHALIB — ARCHITECT";
+document.getElementById("navContact").innerText =
+"Contact";
 
-    document.getElementById("subtitle").innerText =
-      "Architectural Design • Construction Documents • AutoCAD • Revit";
+document.getElementById("aboutTitle").innerText =
+"About Me";
 
-    document.getElementById("languageButton").innerText =
-      "العربية";
+document.getElementById("aboutText").innerText =
+"I am an architect and architectural consultant with professional experience in architectural design, construction documents, working drawings, architectural detailing and project coordination.";
 
-    document.getElementById("navAbout").innerText =
-      "About";
+document.getElementById("aboutText2").innerText =
+"My professional background includes architectural design and documentation using AutoCAD and Revit.";
 
-    document.getElementById("navPortfolio").innerText =
-      "Portfolio";
+document.getElementById("portfolioTitle").innerText =
+"Architectural Portfolio";
 
-    document.getElementById("navSkills").innerText =
-      "Skills";
+document.getElementById("skillsTitle").innerText =
+"Professional Skills";
 
-    document.getElementById("navContact").innerText =
-      "Contact";
+document.getElementById("contactTitle").innerText =
+"Contact";
 
-    document.getElementById("aboutTitle").innerText =
-      "About Me";
+document.getElementById("contactText").innerText =
+"For architectural design, drawings and consultation, please feel free to contact me.";
 
-    document.getElementById("aboutText").innerText =
-      "I am an architect and architectural consultant with professional experience in architectural design, construction documents, working drawings, architectural detailing and project coordination.";
+document.getElementById("visitorLabel").innerText =
+"👁️ Visitors:";
 
-    document.getElementById("aboutText2").innerText =
-      "My professional background includes architectural design and documentation using AutoCAD and Revit.";
+document.getElementById("footerText").innerText =
+"© 2026 MOHAMED AL SAYED GHALIB — ARCHITECTURAL PORTFOLIO";
 
-    document.getElementById("portfolioTitle").innerText =
-      "Architectural Portfolio";
-
-    document.getElementById("project1Title").innerText =
-      "Architectural Design";
-
-    document.getElementById("project1Text").innerText =
-      "Architectural design, planning and preparation of construction documents.";
-
-    document.getElementById("project2Title").innerText =
-      "Construction Drawings";
-
-    document.getElementById("project2Text").innerText =
-      "Detailed architectural drawings, working drawings and construction documentation.";
-
-    document.getElementById("project3Title").innerText =
-      "Revit";
-
-    document.getElementById("project3Text").innerText =
-      "Architectural modeling and documentation using Autodesk Revit.";
-
-    document.getElementById("skillsTitle").innerText =
-      "Professional Skills";
-
-    document.getElementById("contactTitle").innerText =
-      "Contact";
-
-    document.getElementById("contactText").innerText =
-      "For architectural design, drawings and consultation, please feel free to contact me.";
-
-    document.getElementById("visitorLabel").innerText =
-      "👁️ Visitors:";
-
-    document.getElementById("footerText").innerText =
-      "© 2026 MOHAMED AL SAYED GHALIB — ARCHITECTURAL PORTFOLIO";
-
-  }
+}
 
 }
 
 </script>
-
-<script data-goatcounter="https://mohamedaliarchitect.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
