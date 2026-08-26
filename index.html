@@ -11,66 +11,67 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f3f1ec;
+  background: #f3f0e8;
   color: #333;
   line-height: 1.7;
 }
 
 header {
-  background: linear-gradient(135deg, #1d1d1d, #3d3d3d);
+  background: linear-gradient(135deg, #1e1e1e, #3b3b3b);
   color: white;
   text-align: center;
-  padding: 85px 20px 75px;
-  border-bottom: 5px solid #c6a15b;
+  padding: 80px 20px;
+  border-bottom: 4px solid #c6a15b;
 }
 
 header h1 {
   margin: 0;
   font-size: 42px;
   letter-spacing: 2px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 header p {
   font-size: 19px;
   margin: 18px auto 28px;
   max-width: 850px;
-  color: #eeeeee;
+  color: #e8e3d8;
 }
 
 button {
   background: #c6a15b;
   color: white;
-  border: 2px solid #d8bd82;
+  border: 1px solid #d8bd82;
   padding: 12px 28px;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 button:hover {
   background: #a98543;
-  transform: translateY(-2px);
 }
 
 nav {
   background: #ffffff;
   text-align: center;
   padding: 18px 10px;
-  border-bottom: 1px solid #d8d4cc;
+  border-bottom: 1px solid #d8d3c8;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 nav a {
   color: #444;
   text-decoration: none;
-  margin: 0 18px;
+  margin: 0 16px;
   font-weight: bold;
-  transition: 0.3s;
 }
 
 nav a:hover {
@@ -78,42 +79,25 @@ nav a:hover {
 }
 
 section {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 40px;
+  max-width: 1080px;
+  margin: 38px auto;
+  padding: 38px;
   background: white;
-  border: 1px solid #ddd8ce;
-  border-top: 4px solid #c6a15b;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  border: 1px solid #ddd6c8;
+  border-radius: 6px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
 }
 
 h2 {
   color: #9a752d;
   font-size: 30px;
   margin-top: 0;
-  border-bottom: 1px solid #ded8ca;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #d8c39a;
 }
 
 .about-text {
   font-size: 18px;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 25px;
-}
-
-.skill {
-  background: #f1eadc;
-  color: #6d5426;
-  padding: 11px 18px;
-  border: 1px solid #d8c7a3;
-  border-radius: 5px;
-  font-weight: bold;
 }
 
 .projects {
@@ -123,17 +107,17 @@ h2 {
 }
 
 .project {
-  border: 1px solid #d9d5cc;
+  border: 1px solid #d8d3c8;
   border-top: 4px solid #c6a15b;
-  border-radius: 7px;
-  padding: 28px;
+  border-radius: 5px;
+  padding: 26px;
   background: #faf9f6;
-  transition: 0.3s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
 .project h3 {
@@ -147,13 +131,29 @@ h2 {
   letter-spacing: 1px;
 }
 
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.skill {
+  background: #f0eadf;
+  color: #6d5426;
+  padding: 10px 17px;
+  border: 1px solid #dfd1b5;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
 .contact-box {
   text-align: center;
   font-size: 18px;
 }
 
 .contact-box a {
-  color: #8a6828;
+  color: #8b6828;
   text-decoration: none;
   font-weight: bold;
 }
@@ -162,27 +162,34 @@ h2 {
   text-decoration: underline;
 }
 
-.visitor-counter {
+.visitor-box {
+  margin-top: 28px;
+  padding: 16px;
+  background: #f7f3ea;
+  border: 1px solid #dfd1b5;
+  border-radius: 5px;
   text-align: center;
-  margin-top: 30px;
-  padding: 15px;
-  border-top: 1px solid #555;
-  color: #dddddd;
-  font-size: 15px;
+  color: #6d5426;
+  font-size: 16px;
 }
 
 footer {
-  background: #222;
+  background: #202020;
   color: white;
   text-align: center;
-  padding: 30px 15px;
+  padding: 32px 15px;
   margin-top: 50px;
+  border-top: 4px solid #c6a15b;
 }
 
 @media (max-width: 600px) {
 
+  header {
+    padding: 60px 15px;
+  }
+
   header h1 {
-    font-size: 29px;
+    font-size: 28px;
     letter-spacing: 1px;
   }
 
@@ -191,8 +198,8 @@ footer {
   }
 
   section {
-    margin: 22px 12px;
-    padding: 28px 20px;
+    margin: 20px 12px;
+    padding: 25px 20px;
   }
 
   nav a {
@@ -220,12 +227,10 @@ Architectural Design • Construction Documents • AutoCAD • Revit
 </header>
 
 <nav>
-
 <a href="#about" id="navAbout">About</a>
 <a href="#portfolio" id="navPortfolio">Portfolio</a>
 <a href="#skills" id="navSkills">Skills</a>
 <a href="#contact" id="navContact">Contact</a>
-
 </nav>
 
 <section id="about">
@@ -323,7 +328,7 @@ For architectural design, drawings and consultation, please feel free to contact
 </p>
 
 <p>
-<strong id="contactName">MOHAMED AL SAYED GHALIB — ARCHITECT</strong>
+<strong>MOHAMED AL SAYED GHALIB — ARCHITECT</strong>
 </p>
 
 <p>
@@ -333,23 +338,22 @@ For architectural design, drawings and consultation, please feel free to contact
 </p>
 
 <p>
-📧
-<a href="mailto:benghalibs1952@yahoo.com">
+📧 <a href="mailto:benghalibs1952@yahoo.com">
 benghalibs1952@yahoo.com
 </a>
 </p>
+
+<div class="visitor-box">
+👁️ <span id="visitorText">
+Visitor statistics are collected through GoatCounter.
+</span>
+</div>
 
 </div>
 
 </section>
 
 <footer>
-
-<div class="visitor-counter">
-👁️ <span id="visitorText">
-Visitor statistics are collected through GoatCounter.
-</span>
-</div>
 
 <p id="footerText">
 © 2026 MOHAMED AL SAYED GHALIB — ARCHITECTURAL PORTFOLIO
@@ -430,14 +434,11 @@ function changeLanguage() {
     document.getElementById("contactText").innerText =
       "للاستفسار عن التصميم المعماري أو الرسومات أو الاستشارات، يسعدني التواصل معكم.";
 
-    document.getElementById("contactName").innerText =
-      "محمد السيد غالب — مهندس معماري";
-
     document.getElementById("visitorText").innerText =
-      "يتم جمع إحصاءات الزوار من خلال GoatCounter.";
+      "يتم تسجيل إحصائيات زوار الموقع بواسطة GoatCounter.";
 
     document.getElementById("footerText").innerText =
-      "© 2026 محمد السيد غالب — ملف الأعمال المعماري";
+      "© 2026 محمد السيد غالب — مهندس معماري";
 
   } else {
 
@@ -504,15 +505,14 @@ function changeLanguage() {
     document.getElementById("contactText").innerText =
       "For architectural design, drawings and consultation, please feel free to contact me.";
 
-    document.getElementById("contactName").innerText =
-      "MOHAMED AL SAYED GHALIB — ARCHITECT";
-
     document.getElementById("visitorText").innerText =
       "Visitor statistics are collected through GoatCounter.";
 
     document.getElementById("footerText").innerText =
       "© 2026 MOHAMED AL SAYED GHALIB — ARCHITECTURAL PORTFOLIO";
+
   }
+
 }
 
 </script>
