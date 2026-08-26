@@ -25,7 +25,9 @@ body {
     line-height: 1.7;
 }
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+   ========================= */
 
 nav {
     position: sticky;
@@ -58,7 +60,10 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* HEADER */
+/* =========================
+   HERO
+   THREE CLASSICAL VILLA VIEWS
+   ========================= */
 
 .hero {
     min-height: 82vh;
@@ -71,14 +76,75 @@ nav a:hover {
 
     padding: 70px 20px;
 
-    background:
-        linear-gradient(
-            rgba(20,20,20,0.30),
-            rgba(20,20,20,0.50)
-        ),
-        url("VXD19.jpg") center/cover no-repeat;
+    position: relative;
+
+    overflow: hidden;
 
     color: white;
+}
+
+/* Background slideshow */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(20,20,20,0.30),
+            rgba(20,20,20,0.52)
+        ),
+        url("hero-exterior.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    animation: heroSlideshow 18s infinite;
+
+    z-index: 0;
+}
+
+@keyframes heroSlideshow {
+
+    0% {
+        background-image:
+            linear-gradient(
+                rgba(20,20,20,0.30),
+                rgba(20,20,20,0.52)
+            ),
+            url("hero-exterior.jpg");
+    }
+
+    33% {
+        background-image:
+            linear-gradient(
+                rgba(20,20,20,0.30),
+                rgba(20,20,20,0.52)
+            ),
+            url("hero-interior.jpg");
+    }
+
+    66% {
+        background-image:
+            linear-gradient(
+                rgba(20,20,20,0.30),
+                rgba(20,20,20,0.52)
+            ),
+            url("hero-detail.jpg");
+    }
+
+    100% {
+        background-image:
+            linear-gradient(
+                rgba(20,20,20,0.30),
+                rgba(20,20,20,0.52)
+            ),
+            url("hero-exterior.jpg");
+    }
 }
 
 .hero-content {
@@ -91,6 +157,10 @@ nav a:hover {
     border: 1px solid rgba(255,255,255,0.35);
 
     border-radius: 12px;
+
+    position: relative;
+
+    z-index: 1;
 }
 
 .hero h1 {
@@ -118,7 +188,9 @@ nav a:hover {
     font-size: 18px;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+   ========================= */
 
 section {
     max-width: 1200px;
@@ -136,7 +208,9 @@ section h2 {
     margin-bottom: 35px;
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+   ========================= */
 
 .about {
     max-width: 900px;
@@ -159,7 +233,9 @@ section h2 {
     margin-bottom: 18px;
 }
 
-/* PORTFOLIO */
+/* =========================
+   PORTFOLIO
+   ========================= */
 
 .portfolio {
     max-width: none;
@@ -230,7 +306,9 @@ section h2 {
     color: #777;
 }
 
-/* SKILLS */
+/* =========================
+   SKILLS
+   ========================= */
 
 .skills {
     display: grid;
@@ -256,7 +334,9 @@ section h2 {
     font-weight: bold;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+   ========================= */
 
 .contact {
     text-align: center;
@@ -286,7 +366,9 @@ section h2 {
     margin-top: 30px;
 }
 
-/* LIGHTBOX */
+/* =========================
+   LIGHTBOX
+   ========================= */
 
 .lightbox {
     display: none;
@@ -372,7 +454,9 @@ section h2 {
     border-radius: 20px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+   ========================= */
 
 @media (max-width: 700px) {
 
@@ -405,6 +489,7 @@ section h2 {
     .about {
         padding: 30px 20px;
     }
+
 }
 
 </style>
@@ -412,8 +497,9 @@ section h2 {
 
 <body>
 
-
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+     ========================= -->
 
 <nav>
 
@@ -432,7 +518,9 @@ section h2 {
 </nav>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+     ========================= -->
 
 <header class="hero">
 
@@ -455,7 +543,9 @@ Architectural Design • Construction Documents • AutoCAD • Revit
 </header>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+     ========================= -->
 
 <section id="about">
 
@@ -481,7 +571,9 @@ preparation of construction documents using AutoCAD and Revit.
 </section>
 
 
-<!-- PORTFOLIO -->
+<!-- =========================
+     PORTFOLIO
+     ========================= -->
 
 <section id="portfolio" class="portfolio">
 
@@ -494,7 +586,9 @@ Selected Perspectives
 </section>
 
 
-<!-- SKILLS -->
+<!-- =========================
+     SKILLS
+     ========================= -->
 
 <section id="skills">
 
@@ -537,7 +631,9 @@ Project Coordination
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+     ========================= -->
 
 <section id="contact" class="contact">
 
@@ -613,7 +709,9 @@ style="border:0;"
 </section>
 
 
-<!-- LIGHTBOX -->
+<!-- =========================
+     LIGHTBOX
+     ========================= -->
 
 <div class="lightbox" id="lightbox">
 
@@ -646,7 +744,22 @@ id="imageNumber">
 <script>
 
 /* ==========================================
-   ONLY IMAGES WITHOUT "COPY"
+   THREE HERO BACKGROUND IMAGES
+   ========================================== */
+
+const heroImages = [
+
+"hero-exterior.jpg",
+
+"hero-interior.jpg",
+
+"hero-detail.jpg"
+
+];
+
+
+/* ==========================================
+   PORTFOLIO IMAGES
    ========================================== */
 
 const images = [
@@ -693,7 +806,7 @@ const images = [
 
 
 /* ==========================================
-   CREATE PORTFOLIO AUTOMATICALLY
+   CREATE PORTFOLIO
    ========================================== */
 
 const gallery =
@@ -826,7 +939,7 @@ function changeImage(direction) {
 
 
 /* ==========================================
-   KEYBOARD ARROWS
+   KEYBOARD
    ========================================== */
 
 document.addEventListener(
@@ -952,7 +1065,8 @@ function toggleLanguage() {
 
         document.querySelector(
             ".visits p"
-        ).textContent = "👁️ الزوار";
+        ).textContent =
+            "👁️ الزوار";
 
 
     } else {
