@@ -531,5 +531,22 @@ function changeLanguage() {
 <script data-goatcounter="https://mohamedaliarchitect.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
+<div id="visitor-counter" style="text-align:center; margin:20px 0;">
+  <strong>👁️ Total Visitors: </strong>
+  <span id="visitor-number">Loading...</span>
+</div>
+
+<script>
+setTimeout(function() {
+  if (window.goatcounter && window.goatcounter.visit_count) {
+    window.goatcounter.visit_count({
+      append: '#visitor-number',
+      path: 'TOTAL',
+      no_branding: true
+    });
+  }
+}, 1000);
+</script>
+
 </body>
 </html>
