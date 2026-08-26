@@ -994,6 +994,8 @@ function toggleLanguage() {
 
         document.documentElement.lang = "ar";
 
+        document.body.dir = "rtl";
+
 
         document.querySelector(".language")
             .textContent = "English";
@@ -1020,23 +1022,9 @@ function toggleLanguage() {
 
 
         document.querySelector(
-            "#about h2"
-        ).textContent = "نبذة عني";
-
-
-        document.querySelector(
-            "#portfolio h2"
-        ).textContent = "نماذج من الأعمال";
-
-
-        document.querySelector(
-            "#skills h2"
-        ).textContent = "المهارات المهنية";
-
-
-        document.querySelector(
-            "#contact h2"
-        ).textContent = "التواصل";
+            ".hero h1"
+        ).textContent =
+            "محمد السيد غالب";
 
 
         document.querySelector(
@@ -1049,6 +1037,30 @@ function toggleLanguage() {
             ".hero p"
         ).textContent =
             "التصميم المعماري • مستندات التنفيذ • AutoCAD • Revit";
+
+
+        document.querySelector(
+            "#about h2"
+        ).textContent =
+            "نبذة عني";
+
+
+        document.querySelector(
+            "#portfolio h2"
+        ).textContent =
+            "نماذج من الأعمال";
+
+
+        document.querySelector(
+            "#skills h2"
+        ).textContent =
+            "المهارات المهنية";
+
+
+        document.querySelector(
+            "#contact h2"
+        ).textContent =
+            "التواصل";
 
 
         document.querySelector(
@@ -1069,9 +1081,137 @@ function toggleLanguage() {
             "👁️ الزوار";
 
 
+        document.querySelectorAll(
+            ".project-info h3"
+        ).forEach(function(title, index) {
+
+            title.textContent =
+                "منظور " +
+                String(index + 1).padStart(2, "0");
+
+        });
+
+
+        document.querySelectorAll(
+            ".project-info p"
+        ).forEach(function(description) {
+
+            description.textContent =
+                "تصميم معماري";
+
+        });
+
+
     } else {
 
-        location.reload();
+        document.documentElement.lang = "en";
+
+        document.body.dir = "ltr";
+
+
+        document.querySelector(".language")
+            .textContent = "عربي";
+
+
+        document.querySelector(
+            'nav a[href="#about"]'
+        ).textContent = "About";
+
+
+        document.querySelector(
+            'nav a[href="#portfolio"]'
+        ).textContent = "Portfolio";
+
+
+        document.querySelector(
+            'nav a[href="#skills"]'
+        ).textContent = "Skills";
+
+
+        document.querySelector(
+            'nav a[href="#contact"]'
+        ).textContent = "Contact";
+
+
+        document.querySelector(
+            ".hero h1"
+        ).textContent =
+            "Mohamed Al Sayed Ghalib";
+
+
+        document.querySelector(
+            ".hero h2"
+        ).textContent =
+            "Architect Consultant Engineer";
+
+
+        document.querySelector(
+            ".hero p"
+        ).textContent =
+            "Architectural Design • Construction Documents • AutoCAD • Revit";
+
+
+        document.querySelector(
+            "#about h2"
+        ).textContent =
+            "About Me";
+
+
+        document.querySelector(
+            "#portfolio h2"
+        ).textContent =
+            "Selected Perspectives";
+
+
+        document.querySelector(
+            "#skills h2"
+        ).textContent =
+            "Professional Skills";
+
+
+        document.querySelector(
+            "#contact h2"
+        ).textContent =
+            "Contact";
+
+
+        document.querySelector(
+            "#about .about p"
+        ).textContent =
+            "I am an Architect Consultant Engineer with professional experience in architectural design, construction documents, working drawings, architectural detailing and project coordination.";
+
+
+        document.querySelector(
+            "#about .about p:nth-child(3)"
+        ).textContent =
+            "My professional experience includes architectural design and preparation of construction documents using AutoCAD and Revit.";
+
+
+        document.querySelector(
+            ".visits p"
+        ).textContent =
+            "👁️ Visitors";
+
+
+        document.querySelectorAll(
+            ".project-info h3"
+        ).forEach(function(title, index) {
+
+            title.textContent =
+                "Perspective " +
+                String(index + 1).padStart(2, "0");
+
+        });
+
+
+        document.querySelectorAll(
+            ".project-info p"
+        ).forEach(function(description) {
+
+            description.textContent =
+                "Architectural Design";
+
+        });
 
     }
 
