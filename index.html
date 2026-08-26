@@ -4,716 +4,807 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MOHAMED AL SAYED GHALIB | Architect</title>
+<title>Mohamed Al Sayed Ghalib — Architect</title>
 
 <style>
-
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f3f0e8;
-  color: #333;
-  line-height: 1.7;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    line-height: 1.7;
 }
 
-header {
-  background: linear-gradient(135deg, #1f1f1f, #454545);
-  color: white;
-  text-align: center;
-  padding: 75px 20px;
-  border-bottom: 5px solid #c6a15b;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 42px;
-  letter-spacing: 2px;
-}
-
-header p {
-  font-size: 19px;
-  margin: 18px auto 28px;
-  max-width: 850px;
-}
-
-button {
-  background: #c6a15b;
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #a98543;
-}
-
+/* Navigation */
 nav {
-  background: white;
-  text-align: center;
-  padding: 17px;
-  border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #111;
+    padding: 15px 20px;
+    text-align: center;
 }
 
 nav a {
-  color: #555;
-  text-decoration: none;
-  margin: 0 16px;
-  font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 15px;
 }
 
 nav a:hover {
-  color: #a27c36;
+    text-decoration: underline;
 }
 
+/* Language button */
+.language {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    background: white;
+    color: #111;
+    border: none;
+    padding: 7px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hero */
+.hero {
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #222, #555);
+    color: white;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 60px);
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: clamp(18px, 3vw, 28px);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 17px;
+}
+
+/* Sections */
 section {
-  max-width: 1100px;
-  margin: 38px auto;
-  padding: 38px;
-  background: white;
-  border: 1px solid #ded8ca;
-  border-radius: 12px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 25px;
 }
 
-h2 {
-  color: #9a752d;
-  font-size: 30px;
-  margin-top: 0;
-  border-bottom: 2px solid #c6a15b;
-  padding-bottom: 10px;
+section h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 35px;
 }
 
-.about-text {
-  font-size: 18px;
+.about {
+    text-align: center;
+    max-width: 900px;
 }
 
-/* PORTFOLIO */
+/* Portfolio */
+.portfolio {
+    background: white;
+}
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-.gallery-item {
-  background: #faf9f6;
-  border: 1px solid #d9d2c4;
-  border-top: 4px solid #c6a15b;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.25s, box-shadow 0.25s;
+.project {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
 }
 
-.gallery-item img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  display: block;
-  background: #eee;
+.project img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
 }
 
-.gallery-caption {
-  padding: 18px;
-  text-align: center;
+.project-info {
+    padding: 16px;
+    text-align: center;
 }
 
-.gallery-caption h3 {
-  margin: 0 0 7px;
-  color: #444;
+.project-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
-.gallery-caption p {
-  margin: 0;
-  color: #777;
+.project-info p {
+    color: #666;
 }
 
-/* SKILLS */
-
+/* Skills */
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
 }
 
 .skill {
-  background: #f0eadf;
-  color: #6d5426;
-  padding: 10px 17px;
-  border: 1px solid #ddd0b8;
-  border-radius: 20px;
-  font-weight: bold;
+    background: white;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    font-weight: bold;
 }
 
-/* CONTACT */
-
-.contact-box {
-  text-align: center;
-  font-size: 18px;
+/* Contact */
+.contact {
+    text-align: center;
+    background: #222;
+    color: white;
+    max-width: none;
 }
 
-.contact-box a {
-  color: #8b692b;
-  text-decoration: none;
-  font-weight: bold;
+.contact a {
+    color: white;
+    text-decoration: none;
 }
 
-.contact-box a:hover {
-  text-decoration: underline;
+.contact a:hover {
+    text-decoration: underline;
 }
 
-/* VISITOR COUNTER */
-
-.visitor-counter {
-  margin-top: 30px;
-  padding: 18px;
-  text-align: center;
-  background: #f5f1e8;
-  border: 1px solid #d8c9a9;
-  border-radius: 10px;
-  color: #5d4a27;
-  font-size: 18px;
-  font-weight: bold;
+.visits {
+    margin-top: 30px;
+    font-size: 15px;
 }
 
-#visitor-number {
-  color: #9a752d;
-  font-size: 22px;
-  margin-left: 5px;
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.94);
+    align-items: center;
+    justify-content: center;
 }
 
-/* FOOTER */
-
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 30px 15px;
-  margin-top: 50px;
-  border-top: 4px solid #c6a15b;
+.lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    object-fit: contain;
 }
 
-@media (max-width: 600px) {
-
-  header h1 {
-    font-size: 29px;
-    letter-spacing: 1px;
-  }
-
-  header p {
-    font-size: 16px;
-  }
-
-  section {
-    margin: 20px 12px;
-    padding: 25px 20px;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 5px 8px;
-  }
-
-  .gallery-item img {
-    height: 220px;
-  }
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
 }
 
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 55px;
+    cursor: pointer;
+    user-select: none;
+    padding: 20px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.image-number {
+    position: absolute;
+    bottom: 25px;
+    color: white;
+    font-size: 18px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    nav a {
+        margin: 0 5px;
+        font-size: 12px;
+    }
+
+    .language {
+        position: static;
+        margin-left: 10px;
+    }
+
+    .project img {
+        height: 220px;
+    }
+
+    .prev,
+    .next {
+        font-size: 40px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<header>
-
-<h1 id="name">
-MOHAMED AL SAYED GHALIB — ARCHITECT
-</h1>
-
-<p id="subtitle">
-Architectural Design • Construction Documents • AutoCAD • Revit
-</p>
-
-<button id="languageButton" onclick="changeLanguage()">
-العربية
-</button>
-
-</header>
-
-
+<!-- Navigation -->
 <nav>
-
-<a href="#about" id="navAbout">About</a>
-
-<a href="#portfolio" id="navPortfolio">
-Portfolio
-</a>
-
-<a href="#skills" id="navSkills">
-Skills
-</a>
-
-<a href="#contact" id="navContact">
-Contact
-</a>
-
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <button class="language" onclick="toggleLanguage()">عربي</button>
 </nav>
 
+<!-- Hero -->
+<header class="hero">
+    <div>
+        <h1>MOHAMED AL SAYED GHALIB</h1>
+        <h2>Architect</h2>
+        <p>Architectural Design • Construction Documents • AutoCAD • Revit</p>
+    </div>
+</header>
 
+<!-- About -->
 <section id="about">
+    <div class="about">
+        <h2>About Me</h2>
 
-<h2 id="aboutTitle">
-About Me
-</h2>
+        <p>
+            I am an Architect and Architectural Consultant with professional
+            experience in architectural design, construction documents,
+            working drawings, architectural detailing and project coordination.
+        </p>
 
-<p class="about-text" id="aboutText">
-I am an architect and architectural consultant with professional experience in architectural design, construction documents, working drawings, architectural detailing and project coordination.
-</p>
-
-<p class="about-text" id="aboutText2">
-My professional background includes architectural design and documentation using AutoCAD and Revit.
-</p>
-
+        <p style="margin-top:15px;">
+            My professional experience includes architectural design and
+            preparation of construction documents using AutoCAD and Revit.
+        </p>
+    </div>
 </section>
 
-
-<section id="portfolio">
-
-<h2 id="portfolioTitle">
-Architectural Portfolio
-</h2>
-
-<div class="gallery">
-
-
-<div class="gallery-item">
-
-<img src="VXD3.jpg"
-alt="Architectural Project">
-
-<div class="gallery-caption">
-
-<h3>
-Architectural Design
-</h3>
-
-<p>
-Architectural Visualization
-</p>
-
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img src="VXD4.jpg"
-alt="Architectural Project">
-
-<div class="gallery-caption">
-
-<h3>
-Architectural Design
-</h3>
-
-<p>
-Exterior Architectural Study
-</p>
-
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img src="VXD5.jpg"
-alt="Architectural Project">
-
-<div class="gallery-caption">
-
-<h3>
-Architectural Project
-</h3>
-
-<p>
-Architectural Visualization
-</p>
-
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img src="VXD10.jpg"
-alt="Architectural Project">
-
-<div class="gallery-caption">
-
-<h3>
-Architectural Design
-</h3>
-
-<p>
-3D Architectural Visualization
-</p>
-
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img src="PR5.jpg"
-alt="Architectural Project">
-
-<div class="gallery-caption">
-
-<h3>
-Architectural Presentation
-</h3>
-
-<p>
-Architectural Design Study
-</p>
-
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img src="V7.jpg"
-alt="Architectural Project">
-
-<div class="gallery-caption">
-
-<h3>
-Architectural Visualization
-</h3>
-
-<p>
-Architectural Design
-</p>
-
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img src="3D View 1.jpg"
-alt="Architectural Project">
-
-<div class="gallery-caption">
-
-<h3>
-Revit Project
-</h3>
-
-<p>
-Architectural Modeling
-</p>
-
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img src="MAIN SS A4.jpg"
-alt="Construction Drawing">
-
-<div class="gallery-caption">
-
-<h3>
-Construction Documents
-</h3>
-
-<p>
-Architectural Working Drawings
-</p>
-
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img src="p4.jpg"
-alt="Architectural Project">
-
-<div class="gallery-caption">
-
-<h3>
-Architectural Design
-</h3>
-
-<p>
-Project Presentation
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
+<!-- Portfolio -->
+<section id="portfolio" class="portfolio">
+
+    <h2>Selected Perspectives & Drawings</h2>
+
+    <div class="gallery">
+
+        <div class="project">
+            <img src="3D View 1.jpg" onclick="openLightbox(0)">
+            <div class="project-info">
+                <h3>Perspective 01</h3>
+                <p>Architectural Design</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="3D View 10 - Copy.jpg" onclick="openLightbox(1)">
+            <div class="project-info">
+                <h3>Perspective 02</h3>
+                <p>Architectural Visualization</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="3D View 10-A1 - Copy (2).jpg" onclick="openLightbox(2)">
+            <div class="project-info">
+                <h3>Perspective 03</h3>
+                <p>Architectural Design</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="3D View 10-A1 - Copy.jpg" onclick="openLightbox(3)">
+            <div class="project-info">
+                <h3>Perspective 04</h3>
+                <p>Architectural Visualization</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="3D View 1v - Copy - Copy - Copy.jpg" onclick="openLightbox(4)">
+            <div class="project-info">
+                <h3>Perspective 05</h3>
+                <p>Architectural Study</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="3D View 3 - Copy.jpg" onclick="openLightbox(5)">
+            <div class="project-info">
+                <h3>Perspective 06</h3>
+                <p>Architectural Design</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="MAIN SS A3 - Copy (2).jpg" onclick="openLightbox(6)">
+            <div class="project-info">
+                <h3>Drawing 01</h3>
+                <p>Construction Documents</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="MAIN SS A4.jpg" onclick="openLightbox(7)">
+            <div class="project-info">
+                <h3>Drawing 02</h3>
+                <p>Working Drawings</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="PR5.jpg" onclick="openLightbox(8)">
+            <div class="project-info">
+                <h3>Perspective 07</h3>
+                <p>Architectural Presentation</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="V7.jpg" onclick="openLightbox(9)">
+            <div class="project-info">
+                <h3>Perspective 08</h3>
+                <p>Architectural Visualization</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="VXD10.jpg" onclick="openLightbox(10)">
+            <div class="project-info">
+                <h3>Perspective 09</h3>
+                <p>Architectural Design</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="VXD13.jpg" onclick="openLightbox(11)">
+            <div class="project-info">
+                <h3>Perspective 10</h3>
+                <p>Architectural Visualization</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="VXD14 - Copy.jpg" onclick="openLightbox(12)">
+            <div class="project-info">
+                <h3>Perspective 11</h3>
+                <p>Architectural Design</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="VXD16 - Copy.jpg" onclick="openLightbox(13)">
+            <div class="project-info">
+                <h3>Perspective 12</h3>
+                <p>Architectural Visualization</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="VXD16.jpg" onclick="openLightbox(14)">
+            <div class="project-info">
+                <h3>Perspective 13</h3>
+                <p>Architectural Visualization</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="VXD19 - Copy.jpg" onclick="openLightbox(15)">
+            <div class="project-info">
+                <h3>Perspective 14</h3>
+                <p>Architectural Design</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="VXD19.jpg" onclick="openLightbox(16)">
+            <div class="project-info">
+                <h3>Perspective 15</h3>
+                <p>Architectural Visualization</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="VXD20 - Copy.jpg" onclick="openLightbox(17)">
+            <div class="project-info">
+                <h3>Perspective 16</h3>
+                <p>Architectural Design</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="VXD3.jpg" onclick="openLightbox(18)">
+            <div class="project-info">
+                <h3>Perspective 17</h3>
+                <p>Architectural Visualization</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="VXD4.jpg" onclick="openLightbox(19)">
+            <div class="project-info">
+                <h3>Perspective 18</h3>
+                <p>Exterior Architectural Study</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="VXD5.jpg" onclick="openLightbox(20)">
+            <div class="project-info">
+                <h3>Perspective 19</h3>
+                <p>Architectural Visualization</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="fff3.jpg" onclick="openLightbox(21)">
+            <div class="project-info">
+                <h3>Perspective 20</h3>
+                <p>Architectural Design</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="p4.jpg" onclick="openLightbox(22)">
+            <div class="project-info">
+                <h3>Perspective 21</h3>
+                <p>Architectural Design</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="p5 - Copy - Copy.jpg" onclick="openLightbox(23)">
+            <div class="project-info">
+                <h3>Perspective 22</h3>
+                <p>Architectural Presentation</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="picture1.jpg" onclick="openLightbox(24)">
+            <div class="project-info">
+                <h3>Perspective 23</h3>
+                <p>Architectural Study</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="view 1.jpg" onclick="openLightbox(25)">
+            <div class="project-info">
+                <h3>Perspective 24</h3>
+                <p>Architectural Visualization</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="{3D - FAAD}-المعهد العلمى بالبدع - Copy - Copy.jpg" onclick="openLightbox(26)">
+            <div class="project-info">
+                <h3>Perspective 25</h3>
+                <p>Architectural Project</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="{3D}-NA1.jpg" onclick="openLightbox(27)">
+            <div class="project-info">
+                <h3>Perspective 26</h3>
+                <p>Architectural Project</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="هادي الظفيري - v14.jpg" onclick="openLightbox(28)">
+            <div class="project-info">
+                <h3>Perspective 27</h3>
+                <p>Architectural Design</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="هادي الظفيري - v8.jpg" onclick="openLightbox(29)">
+            <div class="project-info">
+                <h3>Perspective 28</h3>
+                <p>Architectural Design</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="واجهه.jpg" onclick="openLightbox(30)">
+            <div class="project-info">
+                <h3>Perspective 29</h3>
+                <p>Architectural Design</p>
+            </div>
+        </div>
+
+    </div>
 </section>
 
-
+<!-- Skills -->
 <section id="skills">
+    <h2>Professional Skills</h2>
 
-<h2 id="skillsTitle">
-Professional Skills
-</h2>
+    <div class="skills">
+        <div class="skill">AutoCAD</div>
+        <div class="skill">Revit</div>
+        <div class="skill">Architectural Design</div>
+        <div class="skill">Construction Documents</div>
+        <div class="skill">Working Drawings</div>
+        <div class="skill">Architectural Detailing</div>
+        <div class="skill">Project Coordination</div>
+    </div>
+</section>
 
-<div class="skills">
+<!-- Contact -->
+<section id="contact" class="contact">
 
-<div class="skill">
-AutoCAD
-</div>
+    <h2>Contact</h2>
 
-<div class="skill">
-Revit
-</div>
+    <p>
+        For architectural design, drawings or consultation,
+        please feel free to contact me.
+    </p>
 
-<div class="skill">
-Architectural Design
-</div>
+    <p style="margin-top:20px;">
+        <strong>MOHAMED AL SAYED GHALIB — ARCHITECT</strong>
+    </p>
 
-<div class="skill">
-Construction Documents
-</div>
+    <p style="margin-top:15px;">
+        📞 <a href="tel:+13609195461">360-919-5461</a>
+    </p>
 
-<div class="skill">
-Working Drawings
-</div>
+    <p>
+        📧 <a href="mailto:benghalibs1952@yahoo.com">
+            benghalibs1952@yahoo.com
+        </a>
+    </p>
 
-<div class="skill">
-Architectural Detailing
-</div>
+    <div class="visits">
+        👁️ Visitors: <span id="visitorCount">Loading...</span>
+    </div>
 
-<div class="skill">
-Project Coordination
-</div>
-
-</div>
+    <p style="margin-top:30px;">
+        © 2026 Mohamed Al Sayed Ghalib — Architect
+    </p>
 
 </section>
 
+<!-- Image Lightbox -->
+<div class="lightbox" id="lightbox">
 
-<section id="contact">
+    <span class="close" onclick="closeLightbox()">&times;</span>
 
-<h2 id="contactTitle">
-Contact
-</h2>
+    <span class="prev" onclick="changeImage(-1)">&#10094;</span>
 
-<div class="contact-box">
+    <img id="lightboxImage" src="" alt="Architectural Portfolio">
 
-<p id="contactText">
-For architectural design, drawings and consultation, please feel free to contact me.
-</p>
+    <span class="next" onclick="changeImage(1)">&#10095;</span>
 
-<p>
-<strong>
-MOHAMED AL SAYED GHALIB — ARCHITECT
-</strong>
-</p>
-
-<p>
-📞
-<span dir="ltr">
-<a href="tel:+13609195461">
-360-919-5461
-</a>
-</span>
-</p>
-
-<p>
-📧
-<a href="mailto:benghalibs1952@yahoo.com">
-benghalibs1952@yahoo.com
-</a>
-</p>
-
-
-<div class="visitor-counter">
-
-<span id="visitorLabel">
-👁️ Visitors:
-</span>
-
-<span id="visitor-number">
-Loading...
-</span>
+    <div class="image-number" id="imageNumber"></div>
 
 </div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<p id="footerText">
-© 2026 MOHAMED AL SAYED GHALIB — ARCHITECTURAL PORTFOLIO
-</p>
-
-</footer>
-
-
-<!-- GOATCOUNTER -->
-
-<script
-data-goatcounter="https://mohamedaliarchitect.goatcounter.com/count"
-async
-src="//gc.zgo.at/count.js">
-</script>
-
 
 <script>
 
-/* LANGUAGE */
+/* =========================
+   IMAGE GALLERY
+========================= */
+
+const images = [
+    "3D View 1.jpg",
+    "3D View 10 - Copy.jpg",
+    "3D View 10-A1 - Copy (2).jpg",
+    "3D View 10-A1 - Copy.jpg",
+    "3D View 1v - Copy - Copy - Copy.jpg",
+    "3D View 3 - Copy.jpg",
+    "MAIN SS A3 - Copy (2).jpg",
+    "MAIN SS A4.jpg",
+    "PR5.jpg",
+    "V7.jpg",
+    "VXD10.jpg",
+    "VXD13.jpg",
+    "VXD14 - Copy.jpg",
+    "VXD16 - Copy.jpg",
+    "VXD16.jpg",
+    "VXD19 - Copy.jpg",
+    "VXD19.jpg",
+    "VXD20 - Copy.jpg",
+    "VXD3.jpg",
+    "VXD4.jpg",
+    "VXD5.jpg",
+    "fff3.jpg",
+    "p4.jpg",
+    "p5 - Copy - Copy.jpg",
+    "picture1.jpg",
+    "view 1.jpg",
+    "{3D - FAAD}-المعهد العلمى بالبدع - Copy - Copy.jpg",
+    "{3D}-NA1.jpg",
+    "هادي الظفيري - v14.jpg",
+    "هادي الظفيري - v8.jpg",
+    "واجهه.jpg"
+];
+
+let currentImage = 0;
+
+function openLightbox(index) {
+
+    currentImage = index;
+
+    document.getElementById("lightbox").style.display = "flex";
+
+    showImage();
+}
+
+function closeLightbox() {
+
+    document.getElementById("lightbox").style.display = "none";
+}
+
+function showImage() {
+
+    document.getElementById("lightboxImage").src =
+        images[currentImage];
+
+    document.getElementById("imageNumber").textContent =
+        "Perspective / Drawing " +
+        (currentImage + 1) +
+        " / " +
+        images.length;
+}
+
+function changeImage(direction) {
+
+    currentImage += direction;
+
+    if (currentImage < 0) {
+        currentImage = images.length - 1;
+    }
+
+    if (currentImage >= images.length) {
+        currentImage = 0;
+    }
+
+    showImage();
+}
+
+/* Keyboard arrows */
+document.addEventListener("keydown", function(event) {
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    if (lightbox.style.display === "flex") {
+
+        if (event.key === "ArrowRight") {
+            changeImage(1);
+        }
+
+        if (event.key === "ArrowLeft") {
+            changeImage(-1);
+        }
+
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+    }
+});
+
+/* =========================
+   LANGUAGE
+========================= */
 
 let arabic = false;
 
-function changeLanguage() {
+function toggleLanguage() {
 
-arabic = !arabic;
+    arabic = !arabic;
 
-if (arabic) {
+    if (arabic) {
 
-document.documentElement.lang = "ar";
-document.documentElement.dir = "rtl";
+        document.documentElement.lang = "ar";
 
-document.getElementById("name").innerText =
-"محمد السيد غالب — مهندس معماري";
+        document.querySelector(".language").textContent =
+            "English";
 
-document.getElementById("subtitle").innerText =
-"التصميم المعماري • مستندات التنفيذ • AutoCAD • Revit";
+        document.querySelector("nav a:nth-child(1)").textContent =
+            "نبذة عني";
 
-document.getElementById("languageButton").innerText =
-"English";
+        document.querySelector("nav a:nth-child(2)").textContent =
+            "الأعمال";
 
-document.getElementById("navAbout").innerText =
-"نبذة عني";
+        document.querySelector("nav a:nth-child(3)").textContent =
+            "المهارات";
 
-document.getElementById("navPortfolio").innerText =
-"الأعمال";
+        document.querySelector("nav a:nth-child(4)").textContent =
+            "التواصل";
 
-document.getElementById("navSkills").innerText =
-"المهارات";
+        document.querySelector("#about h2").textContent =
+            "نبذة عني";
 
-document.getElementById("navContact").innerText =
-"التواصل";
+        document.querySelector("#portfolio h2").textContent =
+            "نماذج من الأعمال";
 
-document.getElementById("aboutTitle").innerText =
-"نبذة عني";
+        document.querySelector("#skills h2").textContent =
+            "المهارات المهنية";
 
-document.getElementById("aboutText").innerText =
-"أنا مهندس معماري واستشاري معماري، لدي خبرة مهنية في التصميم المعماري، ومستندات التنفيذ، والرسومات التنفيذية، والتفاصيل المعمارية وتنسيق المشروعات.";
+        document.querySelector("#contact h2").textContent =
+            "التواصل";
 
-document.getElementById("aboutText2").innerText =
-"تشمل خبرتي المهنية التصميم المعماري وإعداد المستندات باستخدام AutoCAD وRevit.";
+        document.querySelector("#about .about p").textContent =
+            "أنا مهندس معماري واستشاري معماري، لدي خبرة مهنية في التصميم المعماري، ومستندات التنفيذ، والرسومات التنفيذية، والتفاصيل المعمارية وتنسيق المشروعات.";
 
-document.getElementById("portfolioTitle").innerText =
-"نماذج من الأعمال";
+        document.querySelector("#about .about p:nth-child(3)").textContent =
+            "تشمل خبرتي المهنية التصميم المعماري وإعداد مستندات التنفيذ باستخدام AutoCAD وRevit.";
 
-document.getElementById("skillsTitle").innerText =
-"المهارات المهنية";
+    } else {
 
-document.getElementById("contactTitle").innerText =
-"التواصل";
-
-document.getElementById("contactText").innerText =
-"للاستفسار عن التصميم المعماري أو الرسومات أو الاستشارات، يسعدني التواصل معكم.";
-
-document.getElementById("visitorLabel").innerText =
-"👁️ عدد زيارات الموقع:";
-
-document.getElementById("footerText").innerText =
-"© 2026 محمد السيد غالب — مهندس معماري";
-
-} else {
-
-document.documentElement.lang = "en";
-document.documentElement.dir = "ltr";
-
-document.getElementById("name").innerText =
-"MOHAMED AL SAYED GHALIB — ARCHITECT";
-
-document.getElementById("subtitle").innerText =
-"Architectural Design • Construction Documents • AutoCAD • Revit";
-
-document.getElementById("languageButton").innerText =
-"العربية";
-
-document.getElementById("navAbout").innerText =
-"About";
-
-document.getElementById("navPortfolio").innerText =
-"Portfolio";
-
-document.getElementById("navSkills").innerText =
-"Skills";
-
-document.getElementById("navContact").innerText =
-"Contact";
-
-document.getElementById("aboutTitle").innerText =
-"About Me";
-
-document.getElementById("aboutText").innerText =
-"I am an architect and architectural consultant with professional experience in architectural design, construction documents, working drawings, architectural detailing and project coordination.";
-
-document.getElementById("aboutText2").innerText =
-"My professional background includes architectural design and documentation using AutoCAD and Revit.";
-
-document.getElementById("portfolioTitle").innerText =
-"Architectural Portfolio";
-
-document.getElementById("skillsTitle").innerText =
-"Professional Skills";
-
-document.getElementById("contactTitle").innerText =
-"Contact";
-
-document.getElementById("contactText").innerText =
-"For architectural design, drawings and consultation, please feel free to contact me.";
-
-document.getElementById("visitorLabel").innerText =
-"👁️ Visitors:";
-
-document.getElementById("footerText").innerText =
-"© 2026 MOHAMED AL SAYED GHALIB — ARCHITECTURAL PORTFOLIO";
-
+        location.reload();
+    }
 }
 
-}
+/* =========================
+   VISITOR COUNTER
+========================= */
+
+fetch("https://api.countapi.xyz/hit/mohamedaliarchitect.github.io/visits")
+.then(response => response.json())
+.then(data => {
+
+    document.getElementById("visitorCount").textContent =
+        data.value.toLocaleString();
+
+})
+.catch(error => {
+
+    document.getElementById("visitorCount").textContent =
+        "—";
+
+});
 
 </script>
 
