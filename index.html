@@ -11,10 +11,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -24,33 +20,31 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #1e1e1e, #3b3b3b);
+  background: linear-gradient(135deg, #1f1f1f, #454545);
   color: white;
   text-align: center;
-  padding: 80px 20px;
-  border-bottom: 4px solid #c6a15b;
+  padding: 75px 20px;
+  border-bottom: 5px solid #c6a15b;
 }
 
 header h1 {
   margin: 0;
   font-size: 42px;
   letter-spacing: 2px;
-  font-weight: 600;
 }
 
 header p {
   font-size: 19px;
   margin: 18px auto 28px;
   max-width: 850px;
-  color: #e8e3d8;
 }
 
 button {
   background: #c6a15b;
   color: white;
-  border: 1px solid #d8bd82;
+  border: none;
   padding: 12px 28px;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
 }
@@ -60,15 +54,14 @@ button:hover {
 }
 
 nav {
-  background: #ffffff;
+  background: white;
   text-align: center;
-  padding: 18px 10px;
-  border-bottom: 1px solid #d8d3c8;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 17px;
+  border-bottom: 1px solid #ddd;
 }
 
 nav a {
-  color: #444;
+  color: #555;
   text-decoration: none;
   margin: 0 16px;
   font-weight: bold;
@@ -79,12 +72,12 @@ nav a:hover {
 }
 
 section {
-  max-width: 1080px;
+  max-width: 1050px;
   margin: 38px auto;
   padding: 38px;
   background: white;
-  border: 1px solid #ddd6c8;
-  border-radius: 6px;
+  border: 1px solid #ded8ca;
+  border-radius: 12px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.06);
 }
 
@@ -92,43 +85,12 @@ h2 {
   color: #9a752d;
   font-size: 30px;
   margin-top: 0;
-  padding-bottom: 12px;
-  border-bottom: 2px solid #d8c39a;
+  border-bottom: 2px solid #c6a15b;
+  padding-bottom: 10px;
 }
 
 .about-text {
   font-size: 18px;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-.project {
-  border: 1px solid #d8d3c8;
-  border-top: 4px solid #c6a15b;
-  border-radius: 5px;
-  padding: 26px;
-  background: #faf9f6;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.project:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-}
-
-.project h3 {
-  color: #444;
-  margin-top: 8px;
-}
-
-.project-number {
-  color: #b08a43;
-  font-weight: bold;
-  letter-spacing: 1px;
 }
 
 .skills {
@@ -142,9 +104,39 @@ h2 {
   background: #f0eadf;
   color: #6d5426;
   padding: 10px 17px;
-  border: 1px solid #dfd1b5;
-  border-radius: 4px;
+  border: 1px solid #ddd0b8;
+  border-radius: 20px;
   font-weight: bold;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.project {
+  border: 1px solid #d9d2c4;
+  border-top: 4px solid #c6a15b;
+  border-radius: 10px;
+  padding: 25px;
+  background: #faf9f6;
+  transition: transform 0.2s;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+}
+
+.project h3 {
+  color: #444;
+  margin-top: 0;
+}
+
+.project-number {
+  color: #b08a43;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .contact-box {
@@ -153,7 +145,7 @@ h2 {
 }
 
 .contact-box a {
-  color: #8b6828;
+  color: #8b692b;
   text-decoration: none;
   font-weight: bold;
 }
@@ -162,34 +154,39 @@ h2 {
   text-decoration: underline;
 }
 
-.visitor-box {
-  margin-top: 28px;
-  padding: 16px;
-  background: #f7f3ea;
-  border: 1px solid #dfd1b5;
-  border-radius: 5px;
+/* Visitor Counter */
+
+.visitor-counter {
+  margin-top: 30px;
+  padding: 18px;
   text-align: center;
-  color: #6d5426;
-  font-size: 16px;
+  background: #f5f1e8;
+  border: 1px solid #d8c9a9;
+  border-radius: 10px;
+  color: #5d4a27;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#visitorCount {
+  color: #9a752d;
+  font-size: 22px;
+  margin-left: 5px;
 }
 
 footer {
-  background: #202020;
+  background: #222;
   color: white;
   text-align: center;
-  padding: 32px 15px;
+  padding: 30px 15px;
   margin-top: 50px;
   border-top: 4px solid #c6a15b;
 }
 
 @media (max-width: 600px) {
 
-  header {
-    padding: 60px 15px;
-  }
-
   header h1 {
-    font-size: 28px;
+    font-size: 29px;
     letter-spacing: 1px;
   }
 
@@ -338,15 +335,29 @@ For architectural design, drawings and consultation, please feel free to contact
 </p>
 
 <p>
-📧 <a href="mailto:benghalibs1952@yahoo.com">
+📧
+<a href="mailto:benghalibs1952@yahoo.com">
 benghalibs1952@yahoo.com
 </a>
 </p>
 
-<div class="visitor-box">
-👁️ <span id="visitorText">
-Visitor statistics are collected through GoatCounter.
+<div class="visitor-counter">
+
+<span id="visitorLabel">👁️ Visitors:</span>
+
+<span id="visitorCount">
+<script>
+fetch("https://mohamedaliarchitect.goatcounter.com/counter/TOTAL.json")
+.then(response => response.json())
+.then(data => {
+  document.getElementById("visitorCount").innerText = data.count;
+})
+.catch(() => {
+  document.getElementById("visitorCount").innerText = "—";
+});
+</script>
 </span>
+
 </div>
 
 </div>
@@ -434,8 +445,8 @@ function changeLanguage() {
     document.getElementById("contactText").innerText =
       "للاستفسار عن التصميم المعماري أو الرسومات أو الاستشارات، يسعدني التواصل معكم.";
 
-    document.getElementById("visitorText").innerText =
-      "يتم تسجيل إحصائيات زوار الموقع بواسطة GoatCounter.";
+    document.getElementById("visitorLabel").innerText =
+      "👁️ عدد زيارات الموقع:";
 
     document.getElementById("footerText").innerText =
       "© 2026 محمد السيد غالب — مهندس معماري";
@@ -505,8 +516,8 @@ function changeLanguage() {
     document.getElementById("contactText").innerText =
       "For architectural design, drawings and consultation, please feel free to contact me.";
 
-    document.getElementById("visitorText").innerText =
-      "Visitor statistics are collected through GoatCounter.";
+    document.getElementById("visitorLabel").innerText =
+      "👁️ Visitors:";
 
     document.getElementById("footerText").innerText =
       "© 2026 MOHAMED AL SAYED GHALIB — ARCHITECTURAL PORTFOLIO";
