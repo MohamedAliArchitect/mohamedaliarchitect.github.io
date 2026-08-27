@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mohamedaliarchitect.github.io/sitemap.xml
